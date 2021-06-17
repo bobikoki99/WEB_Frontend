@@ -73,7 +73,6 @@ let resolveRoute = (route) => {
 
 let router = (evt) => {
     const url = window.location.hash.slice(1) || "/";
-    console.log(url);
     const routeResolved = resolveRoute(url);
     routeResolved();
 };
