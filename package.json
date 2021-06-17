@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Pa frontend na weba",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobikoki99/WEB_Frontend.git"
+  },
+  "keywords": [
+    "Hektoooor"
+  ],
+  "author": "Ahil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobikoki99/WEB_Frontend/issues"
+  },
+  "homepage": "https://github.com/bobikoki99/WEB_Frontend#readme"
+}
