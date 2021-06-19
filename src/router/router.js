@@ -1,6 +1,9 @@
 let routes = {};
 let templates = {};
 
+let appContext = {
+};
+
 const routeMapper = (url) => {
     if(routes[url]) {
         return url;
@@ -37,7 +40,8 @@ let resolveRoute = (route) => {
 let router = (evt) => {
     const url = routeMapper(window.location.hash.slice(1)) || "/";
     const routeResolved = resolveRoute(url);
-    routeResolved();
+    console.log(url, appContext);
+    routeResolved(appContext);
 };
 
 window.addEventListener('load', router);

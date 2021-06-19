@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
   </head>
   <body>
       <audio preload="auto">
@@ -31,9 +31,11 @@
             <textarea id="credits-input-text-area" rows="4" spellcheck="false" maxlength="3000">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et, dolore soluta impedit eos iure delectus vero iste asperiores distinctio, nesciunt odio provident, officiis illum sequi alias incidunt nisi tempore.
             </textarea>
-            <br />
+            <div class="credits-rotation-wrapper">
+              <div class="settings-text"> Credits rotation</div>
+              <input class="credits-rotation-input" type="number"></input>
+            </div>
             <button id="play" class="play-button" type="submit">Play</button>
-            <br />
           </form>
         </div>
       </section>
