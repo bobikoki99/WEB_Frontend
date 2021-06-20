@@ -40,7 +40,7 @@ export const sharedCreditsPage = async () => {
     const displayTitle = result.title;
     const config = JSON.parse(result.config);
 
-    if(isPasswordCurrect || !result.isPrivate) {
+    if(isPasswordCurrect || result.isPrivate === '0') {
         const youtubeUrl = validateYoutubeUrl(config.youtubeUrl || 'https://www.youtube.com/watch?v=GiPuOb1erM8');
         const videoId = parseYoutubeUrl(youtubeUrl);
     
