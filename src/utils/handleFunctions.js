@@ -1,6 +1,7 @@
 import { transformConfigInput } from '../utils/styleHelpers.js';
 import { createCredit } from '../actions/creditActions.js';
 import { FONTS } from '../constants/dataConstants.js';
+import { transformScreenTime } from '../utils/styleHelpers.js';
 
 export const handlePauseClick = () => {
     const plane = document.getElementById('titlecontent');
