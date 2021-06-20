@@ -195,3 +195,22 @@ export const handleClosePopupClick = () => {
     popupContent.style.display = 'none';
 }
 
+export const handleFullScreenClick = () => {
+    const element = document.body;
+    const requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+    const isFullScreen = (window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height);
+
+    if(!isFullScreen) {
+        if (requestMethod) {
+            requestMethod.call(element);
+        } else if (typeof window.ActiveXObject !== "undefined") {
+            var wscript = new ActiveXObject("WScript.Shell");
+            if (wscript !== null) {
+                wscript.SendKeys("{F11}");
+            }
+        }
+    } else {
+        document.exitFullscreen();
+    }
+}

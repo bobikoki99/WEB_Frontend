@@ -1,4 +1,4 @@
-import { createDiv, parseTextToHtml } from "../utils/helpers.js";
+import { parseTextToHtml } from "../utils/helpers.js";
 import { createCredits, createActionButtons, createPasswordForm } from "../utils/viewHelpers.js";
 import { originDivId } from '../constants/routerConstants.js';
 import { parseYoutubeUrl } from '../utils/helpers.js';
@@ -11,6 +11,7 @@ import {
     handleBackwardClick, 
     handleVolumeChange, 
     handleReverseClick,
+    handleFullScreenClick,
 } from "../utils/handleFunctions.js";
 
 import { getCredit, checkPassword } from '../actions/creditActions.js';
@@ -64,6 +65,7 @@ export const sharedCreditsPage = async () => {
         const forwardButton = document.getElementsByClassName('forward-button')[0];
         const volumeElement = document.getElementById('volume-control');
         const reverseButton = document.getElementsByClassName('reverse-button')[0];
+        const fullScreenButton = document.getElementsByClassName('full-screen')[0];
     
         const iframe = document.querySelector('iframe');
         iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
@@ -73,6 +75,7 @@ export const sharedCreditsPage = async () => {
         forwardButton.addEventListener('click', handleForwardClick);
         reverseButton.addEventListener('click', handleReverseClick)
         volumeElement.addEventListener('change', handleVolumeChange);
+        fullScreenButton.addEventListener('click', handleFullScreenClick)
     
         localStorage.clear();
     

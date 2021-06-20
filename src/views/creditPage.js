@@ -9,7 +9,8 @@ import {
     handleForwardClick, 
     handleBackwardClick, 
     handleVolumeChange, 
-    handleReverseClick 
+    handleReverseClick, 
+    handleFullScreenClick,
 } from "../utils/handleFunctions.js";
 
 export const creditPage = () => {
@@ -44,12 +45,14 @@ export const creditPage = () => {
     const forwardButton = document.getElementsByClassName('forward-button')[0];
     const volumeElement = document.getElementById('volume-control');
     const reverseButton = document.getElementsByClassName('reverse-button')[0];
+    const fullScreenButton = document.getElementsByClassName('full-screen')[0];
 
     pauseButton.addEventListener('click', handlePauseClick);
     reverseForwardButton.addEventListener('click', handleBackwardClick);
     forwardButton.addEventListener('click', handleForwardClick);
     reverseButton.addEventListener('click', handleReverseClick)
     volumeElement.addEventListener('change', handleVolumeChange);
+    fullScreenButton.addEventListener('click', handleFullScreenClick)
 
     return true;
 };

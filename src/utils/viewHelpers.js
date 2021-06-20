@@ -7,7 +7,8 @@ export const createCredits = (displayTitle, displayText) => {
 export const createActionButtons = (videoId) => {
     return createDiv('actions', `<div class="action-wrapper"><div style="position:absolute;top:-500px;left:-5px"><iframe id='audio' width="300" height="300"
                                 src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&rel=0&controls=1" controls="1" allow='autoplay' frameborder="0" allowfullscreen>
-                                </iframe></div><button class="reverse-button no-background"><image class="reverse" src="./src/assets/reverse.svg"></image></button>
+                                </iframe></div><button class="full-screen-button no-background"><image class="full-screen" src="./src/assets/full-screen.svg"></image>
+                                </button><button class="reverse-button no-background"><image class="reverse" src="./src/assets/reverse.svg"></image></button>
                                 <button class="backward-button no-background"><image class="reverse-forward" src="./src/assets/fast-forward.svg"></image></button>
                                 <button class="pause-button no-background"><image class='pause-image' src="./src/assets/pause.svg"></image></button><button class="forward-button no-background">
                                 <image src="./src/assets/fast-forward.svg"></image></button><input type="range" value="100" id="volume-control"></div>`
