@@ -1,8 +1,8 @@
-import { BACKEND_BASE_URL } from "../constants/envConstants.js";
+import { BASE_URL } from "../constants/envConstants.js";
 
 
 export const createCredit = async (data) => {
-    const response = await fetch(`${BACKEND_BASE_URL}/backend/api/credit/create.php`, {
+    const response = await fetch(`${BASE_URL}/backend/api/credit/create.php`, {
         method: 'POST',
         mode: 'cors', 
         cache: 'no-cache', 
@@ -16,7 +16,7 @@ export const createCredit = async (data) => {
 }
 
 export const getCredit = async (id) => {
-    const response = await fetch(`${BACKEND_BASE_URL}/backend/api/credit/read_single.php?id=${id}`, {
+    const response = await fetch(`${BASE_URL}/backend/api/credit/read_single.php?id=${id}`, {
         method: 'GET',
         mode: 'cors', 
         cache: 'no-cache', 
@@ -29,7 +29,7 @@ export const getCredit = async (id) => {
 }
 
 export const checkPassword = async (id, password) => {
-    const response = await fetch(`${BACKEND_BASE_URL}/backend/api/credit/check_password.php?id=${id}&pass=${password}`, {
+    const response = await fetch(`${BASE_URL}/backend/api/credit/check_password.php?id=${id}&pass=${password}`, {
         method: 'GET',
         mode: 'cors', 
         cache: 'no-cache', 

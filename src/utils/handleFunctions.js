@@ -2,7 +2,6 @@ import { transformConfigInput } from '../utils/styleHelpers.js';
 import { createCredit } from '../actions/creditActions.js';
 import { FONTS } from '../constants/dataConstants.js';
 import { transformScreenTime } from '../utils/styleHelpers.js';
-import { FRONTEND_BASE_URL } from '../constants/envConstants.js';
 
 export const handlePauseClick = () => {
     const plane = document.getElementById('titlecontent');
@@ -101,7 +100,7 @@ export const handlePlayClick = () => {
     const dataTransfer = { textData, config };
     localStorage.setItem('creditsData', JSON.stringify(dataTransfer));
 
-    window.location.href = `${FRONTEND_BASE_URL}/#/credit`;
+    window.location.href = 'http://127.0.0.1:5500/#/credit';
 };
 
 export const handleImportClick = async () => {
@@ -183,7 +182,7 @@ export const handleSubmitShareClick = async () => {
 
     const result = await createCredit(data);
 
-    navigator.clipboard.writeText(`${FRONTEND_BASE_URL}/#/credit/shared?id=${result.id}`)
+    navigator.clipboard.writeText(`http://127.0.0.1:5500/#/credit/shared?id=${result.id}`)
 
     document.getElementById('private').checked = false;
     document.getElementById('password').value = '';
@@ -196,7 +195,7 @@ export const handleClosePopupClick = () => {
 
     document.getElementById('private').checked = false;
     document.getElementById('password').value = '';
-
+    
     popupContent.style.display = 'none';
 }
 
