@@ -192,6 +192,10 @@ export const handleSubmitShareClick = async () => {
 
 export const handleClosePopupClick = () => {
     const popupContent = document.getElementsByClassName('popup-content')[0];
+
+    document.getElementById('private').checked = false;
+    document.getElementById('password').value = '';
+    
     popupContent.style.display = 'none';
 }
 
